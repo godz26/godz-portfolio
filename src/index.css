@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .hover-icon{
+    fill: gray;
+    transition-duration: 250ms;
+  }
+  .my-hover {
+    position: relative;
+    cursor: pointer;
+  }
+  .my-hover::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: white;
+    transition: width 0.5s ease;
+  }
+
+  .my-hover:hover::after {
+    width: 100%;
+  }
+
+  .glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+}
+
+.toolTip{
+  position: absolute;
+  bottom: 100%;
+  left:50%;
+  margin-bottom: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  font-size: 0.75rem ;
+  line-height: 1rem ;
+  border-radius: 0.25rem;
+  opacity: 0;
+  transition-duration: 300ms;
+  white-space: nowrap;
+  z-index:10;
+}
+
+}
