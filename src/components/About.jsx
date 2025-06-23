@@ -72,8 +72,8 @@ export const About = () => {
                   </div>
                 </div>
               </div>
-              <div className='h-[1px] w-[73%] mt-[130px] bg-black'>
-                <ul className='flex w-[73%] gap-[30px] ml-[50px] p-[5px] mt-[5px] text-[20px]'>
+              <div className='h-[1px] lg:w-[73%] w-[90%] lg:mt-[130px] mt-[240px] bg-black'>
+                <ul className='flex w-[73%] gap-[30px] lg:ml-[50px] p-[5px] mt-[5px] text-[20px]'>
                   <li>Posts</li>
                   <li className='text-blue-700 border-b-[2px] border-blue-700'>About</li>
                   <li>Friends</li>
